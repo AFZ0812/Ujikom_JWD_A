@@ -1,0 +1,965 @@
+/* Mengatur font, spasi, dan warna latar belakang untuk seluruh halaman */
+body {
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins untuk teks */
+    line-height: 1.6; /* Menyediakan jarak antar baris yang nyaman dibaca */
+    margin: 0; /* Menghapus margin default pada body */
+    padding: 0; /* Menghapus padding default pada body */
+    background-color: #f0f0f0; /* Warna latar belakang halaman */
+    padding-left: 16%; /* Memberikan ruang di sebelah kiri untuk sidebar */
+}
+
+/* Container Style */
+/* Mengatur kontainer utama dengan lebar maksimum, padding, dan bayangan */
+.container {
+    max-width: 1200px; /* Membatasi lebar kontainer maksimum */
+    margin: 0 auto; /* Memusatkan kontainer secara horizontal */
+    padding: 20px; /* Menyediakan padding di dalam kontainer */
+    background-color: #fff; /* Warna latar belakang putih untuk kontainer */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan lembut pada kontainer */
+}
+
+/* Header Style */
+/* Mengatur tata letak dan gaya untuk bagian header */
+header {
+    display: flex; /* Menggunakan flexbox untuk tata letak header */
+    align-items: center; /* Menyelaraskan item secara vertikal di tengah */
+    justify-content: flex-start; /* Menyelaraskan item di sisi kiri */
+    padding: 10px; /* Padding di sekitar header */
+}
+
+.logo {
+    margin-right: 20px; /* Jarak antara logo dan teks header */
+}
+
+/* Logo Image Style */
+/* Mengatur tampilan gambar logo untuk membuatnya bulat dan teratur */
+.logo img {
+    width: 100px; /* Lebar gambar logo */
+    height: 100px; /* Tinggi gambar logo */
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    border: 3px solid #000000; /* Menambahkan border hitam di sekitar gambar */
+    object-fit: cover; /* Memastikan gambar memenuhi area tanpa distorsi */
+}
+
+/* Heading 1 Style */
+/* Mengatur ukuran dan margin untuk judul utama */
+h1 {
+    font-size: 2.5em; /* Ukuran font untuk judul utama */
+    margin: 0; /* Menghapus margin default pada h1 */
+}
+
+/* Navigation Bar Styles */
+/* Mengatur gaya untuk navbar */
+nav {
+    background-color: #333; /* Warna latar belakang navbar */
+    color: #fff; /* Warna teks navbar */
+    padding: 10px 0; /* Padding atas dan bawah navbar */
+    text-align: center; /* Menyelaraskan teks di tengah navbar */
+    position: sticky; /* Menjaga navbar tetap terlihat saat menggulir */
+    top: 0; /* Posisi sticky di bagian atas halaman */
+    width: 100%; /* Lebar navbar 100% dari kontainer */
+    z-index: 1000; /* Menjamin navbar berada di atas elemen lain */
+}
+
+/* Navigation List Styles */
+/* Mengatur gaya untuk daftar navigasi dalam navbar */
+nav ul {
+    list-style: none; /* Menghapus bullet points dari daftar */
+    display: flex; /* Menggunakan flexbox untuk tata letak horizontal */
+    justify-content: space-around; /* Menyebarkan item secara merata di navbar */
+    margin: 0; /* Menghapus margin default pada ul */
+    padding: 0; /* Menghapus padding default pada ul */
+}
+
+nav ul li {
+    position: relative; /* Menyediakan posisi relatif untuk item jika diperlukan */
+}
+
+/* Navigation Link Styles */
+/* Mengatur gaya untuk tautan navigasi */
+nav ul li a {
+    color: #fff; /* Warna teks tautan */
+    text-decoration: none; /* Menghapus garis bawah dari tautan */
+    padding: 15px 20px; /* Padding di sekitar teks tautan */
+    display: block; /* Menjadikan tautan sebagai blok penuh */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transisi untuk efek hover */
+    font-size: 1.1em; /* Ukuran font untuk tautan */
+    text-align: center; /* Menyelaraskan teks di tengah tautan */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Warna latar belakang tautan saat hover */
+    color: #ffeb3b; /* Warna teks saat hover */
+    border-radius: 5px; /* Sudut membulat saat hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan saat hover */
+}
+
+/* Icon in Navigation Links */
+/* Mengatur gaya untuk ikon dalam tautan navigasi */
+nav ul li a i {
+    margin-right: 8px; /* Jarak antara ikon dan teks */
+    font-size: 1.2em; /* Ukuran font untuk ikon */
+    vertical-align: middle; /* Menyelaraskan ikon dengan teks */
+}
+
+nav ul li a:hover i {
+    color: #ffeb3b; /* Warna ikon saat hover untuk konsistensi */
+}
+
+/* Sidebar Styles */
+aside {
+    position: fixed; /* Sidebar tetap di tempat saat scroll */
+    width: 13.5%; /* Lebar sidebar */
+    padding: 20px; /* Padding di dalam sidebar */
+    background-color: #f4f4f4; /* Warna latar belakang sidebar */
+    height: 100vh; /* Tinggi sidebar mengikuti viewport */
+    overflow-y: auto; /* Scroll pada sidebar jika konten melebihi tinggi viewport */
+    top: 0; /* Posisi di atas halaman */
+    left: 0; /* Posisi di sisi kiri halaman */
+    z-index: 1000; /* Menjaga agar sidebar berada di atas konten lainnya */
+}
+
+/* Konten Utama */
+.main-content {
+    margin-left: 20%; /* Memberikan ruang yang sama dengan lebar sidebar */
+    padding: 20px; /* Padding di dalam konten utama */
+}
+
+/* Media Query untuk Responsif */
+@media (max-width: 768px) {
+    aside {
+        width: 100%; /* Sidebar mengambil 100% lebar pada layar kecil */
+        height: auto; /* Tinggi sidebar menyesuaikan dengan konten */
+        position: relative; /* Mengatur posisi relative pada layar kecil */
+    }
+
+    main {
+        margin-left: 0; /* Menghapus margin kiri pada layar kecil */
+        width: 100%; /* Mengatur lebar main menjadi 100% pada layar kecil */
+        padding: 10px; /* Menyediakan padding di dalam konten utama */
+    }
+}
+
+/* Sidebar List Styles */
+/* Mengatur gaya untuk daftar dalam sidebar */
+aside ul {
+    list-style: none; /* Menghapus bullet points dari daftar */
+    padding: 0; /* Menghapus padding default pada ul */
+}
+
+aside ul li {
+    margin-bottom: 10px; /* Jarak antara item daftar */
+}
+
+aside ul li a {
+    color: #333; /* Warna teks tautan di sidebar */
+    text-decoration: none; /* Menghapus garis bawah dari tautan */
+    padding: 10px 20px; /* Padding di sekitar teks tautan */
+    display: block; /* Menjadikan tautan sebagai blok penuh */
+    transition: background-color 0.3s ease; /* Transisi untuk efek hover */
+}
+
+aside ul li a:hover {
+    background-color: #ddd; /* Warna latar belakang tautan saat hover */
+}
+
+/* Sub-menu Styles */
+/* Mengatur gaya untuk sub-menu dalam sidebar */
+aside ul ul {
+    margin-top: 10px; /* Jarak di atas sub-menu */
+}
+
+aside ul ul li {
+    margin-bottom: 5px; /* Jarak antara item sub-menu */
+    padding-left: 20px; /* Padding di sebelah kiri sub-menu */
+}
+
+/* Main Content Styles */
+/* Mengatur gaya untuk konten utama */
+main {
+    width: 96.5%; /* Lebar konten utama */
+    padding: 20px; /* Padding di dalam konten utama */
+    background-color: #f9f9f9; /* Warna latar belakang konten utama */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada konten utama */
+    border-radius: 8px; /* Sudut membulat pada konten utama */
+    margin-top: 2%;
+}
+
+main section {
+    margin-bottom: 40px; /* Jarak di bawah setiap bagian konten utama */
+}
+
+
+/* Gaya untuk judul section galeri */
+#profile h2 {
+    font-size: 2em; /* Ukuran font untuk judul */
+    color: #333; /* Warna teks judul */
+    margin-bottom: 20px; /* Jarak bawah untuk judul */
+    border-bottom: 4px solid #eee; /* Garis bawah untuk judul */
+    padding-bottom: 10px; /* Padding bawah untuk judul */
+}
+
+/* Cover Image Styles */
+/* Mengatur gaya untuk gambar penutup */
+.cover-image-container {
+    position: relative; /* Posisi relatif untuk container gambar */
+    width: 100%; /* Lebar 100% dari kontainer */
+    height: 500px; /* Tinggi gambar penutup */
+    overflow: hidden; /* Memastikan gambar tidak melampaui container */
+    border-radius: 18px; /* Sudut membulat untuk container gambar */
+    margin-bottom: 20px; /* Jarak di bawah gambar penutup */
+}
+
+.cover-image {
+    width: 100%; /* Lebar gambar penutup */
+    height: 104%; /* Tinggi gambar penutup */
+    object-fit: cover; /* Memastikan gambar memenuhi area container */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transisi untuk efek hover */
+    opacity: 0.9; /* Opasitas gambar */
+}
+
+.cover-image-container:hover .cover-image {
+    transform: scale(1.05); /* Efek zoom pada gambar saat hover */
+    opacity: 1; /* Mengatur opasitas gambar saat hover */
+}
+
+/* Heading 2 Styles */
+/* Mengatur gaya untuk judul bagian kedua */
+h2 {
+    font-size: 2em; /* Ukuran font untuk h2 */
+    color: #333; /* Warna teks untuk h2 */
+    margin-bottom: 15px; /* Jarak di bawah h2 */
+    display: flex; /* Menggunakan flexbox untuk menyelaraskan item dalam h2 */
+    align-items: center; /* Menyelaraskan item secara vertikal di tengah */
+}
+
+h2 i {
+    margin-right: 10px; /* Jarak antara ikon dan teks dalam h2 */
+    color: #ff6b00; /* Warna ikon */
+}
+
+/* Paragraph Styles */
+/* Mengatur gaya untuk paragraf */
+p {
+    font-size: 1.2em; /* Ukuran font untuk paragraf */
+    color: #555; /* Warna teks paragraf */
+    margin-bottom: 20px; /* Jarak di bawah paragraf */
+    line-height: 1.8; /* Jarak antar baris paragraf */
+    text-align: justify;
+}
+
+/* Gaya untuk daftar anggota tim */
+.team-members {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Menambah jarak yang konsisten antara elemen */
+}
+
+/* Gaya untuk judul section tim */
+#team h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #eee;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Gaya untuk setiap anggota tim */
+.team-member {
+    flex: 1 1 30%;
+    max-width: 220px;
+    text-align: center;
+    background-color: #f9f9f9; /* Memberikan latar belakang yang lembut */
+    border-radius: 10px; /* Membuat sudut yang lembut */
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Memberikan efek bayangan untuk kedalaman */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi untuk interaksi */
+    cursor: pointer; /* Menambahkan kursor pointer saat hover */
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* Sedikit mengangkat kartu saat di-hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Memperbesar efek bayangan saat di-hover */
+}
+
+/* Gaya untuk kontainer foto dan teks */
+.member-photo-wrapper {
+    text-align: center;
+}
+
+/* Gaya untuk foto anggota tim */
+.member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #eee;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease; /* Efek transisi untuk interaksi */
+}
+
+.team-member:hover .member-photo {
+    border-color: #ccc; /* Mengubah warna bingkai foto saat di-hover */
+}
+
+/* Gaya untuk nama dan jabatan anggota tim */
+.member-info {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Gaya untuk nama anggota tim */
+.member-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    display: block; /* Memastikan elemen mengambil ruang penuh dan bisa diatur secara sentral */
+}
+
+/* Gaya untuk jabatan anggota tim */
+.member-info strong {
+    font-size: 1em;
+    color: #777; /* Warna yang lebih lembut untuk jabatan */
+    display: block;
+    margin-top: 5px;
+}
+
+/* Gaya untuk deskripsi anggota tim */
+.member-description {
+    display: none; /* Sembunyikan deskripsi secara default */
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+    text-align: left;
+    line-height: 1.2; /* Mengurangi jarak antar baris */
+    margin-bottom: 0; /* Menghapus jarak bawah jika ada */
+}
+
+.team-member.active .member-description {
+    display: block; /* Tampilkan deskripsi jika elemen memiliki kelas 'active' */
+}
+
+/* Gaya untuk section visi */
+#vision {
+    margin-top: 20px; /* Jarak atas untuk section visi */
+}
+
+/* Gaya untuk judul section visi */
+#vision h2 {
+    font-size: 2em; /* Ukuran font untuk judul */
+    color: #333; /* Warna teks judul */
+    margin-bottom: 20px; /* Jarak bawah untuk judul */
+    border-bottom: 4px solid #eee; /* Garis bawah untuk judul */
+    padding-bottom: 10px; /* Padding bawah untuk judul */
+}
+
+/* Gaya untuk konten visi dan misi */
+.vision-mission {
+    display: flex; /* Mengatur elemen secara fleksibel dalam satu baris */
+    justify-content: space-between; /* Menyebarkan elemen secara merata */
+    flex-wrap: wrap; /* Memungkinkan elemen untuk membungkus ke baris berikutnya */
+}
+
+/* Gaya untuk section visi */
+.vision {
+    flex: 1; /* Elemen visi mengambil ruang yang tersedia */
+    min-width: 300px; /* Lebar minimum untuk section visi */
+    margin-right: 20px; /* Jarak kanan untuk section visi */
+}
+
+/* Gaya untuk section misi */
+.mission {
+    flex: 1; /* Elemen misi mengambil ruang yang tersedia */
+    min-width: 300px; /* Lebar minimum untuk section misi */
+}
+
+/* Gaya untuk judul dalam section visi dan misi */
+.vision h3, .mission h3 {
+    font-size: 1.5em; /* Ukuran font untuk judul */
+    color: #444; /* Warna teks judul */
+    margin-bottom: 10px; /* Jarak bawah untuk judul */
+    border-bottom: 1px solid #ddd; /* Garis bawah untuk judul */
+    padding-bottom: 5px; /* Padding bawah untuk judul */
+}
+
+/* Gaya untuk paragraf dalam section visi */
+.vision p {
+    font-size: 1.1em; /* Ukuran font untuk paragraf */
+    color: #666; /* Warna teks paragraf */
+    line-height: 1.6; /* Jarak antar baris dalam paragraf */
+}
+
+/* Gaya untuk daftar dalam section misi */
+.mission ul {
+    list-style-type: disc; /* Tipe list adalah bulat */
+    padding-left: 20px; /* Padding kiri untuk daftar */
+}
+
+/* Gaya untuk item dalam daftar misi */
+.mission ul li {
+    font-size: 1.1em; /* Ukuran font untuk item daftar */
+    color: #555; /* Warna teks item daftar */
+    margin-bottom: 10px; /* Jarak bawah untuk item daftar */
+}
+
+/* Gaya untuk section produk dan layanan */
+#products {
+    margin-top: 20px; /* Jarak atas untuk section produk dan layanan */
+}
+
+/* Gaya untuk judul section produk dan layanan */
+#products h2 {
+    font-size: 2em; /* Ukuran font untuk judul */
+    color: #333; /* Warna teks judul */
+    margin-bottom: 20px; /* Jarak bawah untuk judul */
+    border-bottom: 4px solid #eee; /* Garis bawah untuk judul */
+    padding-bottom: 10px; /* Padding bawah untuk judul */
+}
+
+/* Gaya untuk konten produk dan layanan */
+.products-services {
+    display: flex; /* Mengatur elemen secara fleksibel dalam satu baris */
+    justify-content: space-between; /* Menyebarkan elemen secara merata */
+    flex-wrap: wrap; /* Memungkinkan elemen untuk membungkus ke baris berikutnya */
+    gap: 20px; /* Jarak antar elemen */
+}
+
+/* Gaya untuk produk dan layanan */
+.product, .service {
+    flex: 1; /* Elemen produk dan layanan mengambil ruang yang tersedia */
+    min-width: 300px; /* Lebar minimum untuk produk dan layanan */
+}
+
+/* Gaya untuk judul dalam produk dan layanan */
+.product h3, .service h3 {
+    font-size: 1.5em; /* Ukuran font untuk judul */
+    color: #444; /* Warna teks judul */
+    margin-bottom: 15px; /* Jarak bawah untuk judul */
+    border-bottom: 1px solid #ddd; /* Garis bawah untuk judul */
+    padding-bottom: 10px; /* Padding bawah untuk judul */
+    text-align: center;
+}
+
+/* Gaya untuk daftar produk dan layanan */
+.product-list, .service-list {
+    display: flex; /* Mengatur elemen secara fleksibel dalam satu baris */
+    flex-wrap: wrap; /* Memungkinkan elemen untuk membungkus ke baris berikutnya */
+    gap: 20px; /* Jarak antar elemen */
+}
+
+/* Gaya untuk item produk dan layanan */
+.product-item, .service-item {
+    flex: 1; /* Elemen item mengambil ruang yang tersedia */
+    min-width: 200px; /* Lebar minimum untuk item */
+    max-width: 300px; /* Lebar maksimum untuk item */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk item */
+    border-radius: 8px; /* Sudut melengkung pada item */
+    overflow: hidden; /* Menghapus bagian yang melampaui batas item */
+    background-color: #fff; /* Warna latar belakang item */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi pada hover */
+    cursor: pointer; /* Kursor pointer saat hover */
+}
+
+/* Efek hover untuk item produk dan layanan */
+.product-item:hover, .service-item:hover {
+    transform: translateY(-10px); /* Efek angkat pada hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Meningkatkan bayangan pada hover */
+}
+
+/* Gaya untuk gambar dalam item produk dan layanan */
+.product-item img, .service-item img {
+    width: 100%; /* Lebar gambar sesuai dengan lebar item */
+    height: 200px; /* Tinggi gambar, sesuaikan untuk tampilan yang lebih baik */
+    object-fit: cover; /* Memastikan gambar menutupi area tanpa distorsi */
+    transition: transform 0.3s ease; /* Efek transisi pada hover */
+}
+
+/* Efek hover pada gambar produk dan layanan */
+.product-item:hover img, .service-item:hover img {
+    transform: scale(1.05); /* Efek zoom pada hover */
+}
+
+/* Gaya untuk informasi produk dan layanan */
+.product-info, .service-info {
+    padding: 15px; /* Padding di dalam kontainer informasi */
+}
+
+/* Gaya untuk judul informasi produk dan layanan */
+.product-info h4, .service-info h4 {
+    font-size: 1.2em; /* Ukuran font untuk judul informasi */
+    color: #333; /* Warna teks judul informasi */
+    margin-bottom: 10px; /* Jarak bawah untuk judul informasi */
+}
+
+/* Gaya untuk deskripsi produk dan layanan */
+.product-description, .service-description {
+    display: none; /* Sembunyikan deskripsi secara default */
+    margin-top: 10px;
+    font-size: 0.9em; /* Ukuran font untuk deskripsi */
+    color: #666; /* Warna teks deskripsi */
+    line-height: 1.5; /* Jarak antar baris dalam deskripsi */
+}
+
+/* Tampilkan deskripsi jika item memiliki kelas 'active' */
+.product-item.active .product-description, .service-item.active .service-description {
+    display: block; /* Tampilkan deskripsi jika elemen memiliki kelas 'active' */
+}
+
+/* Gaya untuk section galeri */
+#gallery {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Gaya untuk judul section galeri */
+#gallery h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Gaya untuk gallery container */
+.gallery-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gaya untuk gallery slider */
+.gallery-slider {
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item {
+    flex: 0 0 25%; /* Menampilkan 4 gambar per baris */
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px; /* Menjaga tinggi gambar konsisten */
+    border-radius: 8px;
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+}
+
+/* Style for navigation buttons */
+.swiper-button-next, .swiper-button-prev {
+    color: #333; /* Sesuaikan dengan desain Anda */
+}
+
+/* Style for pagination bullets */
+.swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #333;
+}
+
+/* Gaya untuk judul section galeri */
+#client h2 {
+    font-size: 2em; /* Ukuran font untuk judul */
+    color: #333; /* Warna teks judul */
+    margin-bottom: 20px; /* Jarak bawah untuk judul */
+    border-bottom: 4px solid #eee; /* Garis bawah untuk judul */
+    padding-bottom: 10px; /* Padding bawah untuk judul */
+}
+
+/* Gaya untuk daftar klien */
+.client-list {
+    display: flex; /* Mengatur elemen klien secara fleksibel */
+    flex-wrap: nowrap; /* Memastikan semua item tetap dalam satu baris */
+    gap: 20px; /* Jarak antara item */
+    overflow-x: auto; /* Memungkinkan scroll horizontal jika diperlukan */
+    padding: 10px; /* Padding di sekitar konten daftar klien */
+}
+
+/* Gaya untuk item klien */
+.client-item {
+    flex: 1 1 24%; /* Flex-grow, flex-shrink, dan flex-basis untuk memastikan 4 item per baris */
+    max-width: 24%; /* Membatasi lebar item agar tidak melebihi 24% dari lebar kontainer */
+    background-color: #fff; /* Warna latar belakang untuk item klien */
+    border-radius: 8px; /* Sudut melengkung pada item klien */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk memberikan kedalaman */
+    padding: 15px; /* Padding di dalam kontainer item klien */
+    text-align: center; /* Menyelaraskan teks di tengah */
+    display: flex; /* Mengatur elemen di dalam item klien secara fleksibel */
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    align-items: center; /* Menyelaraskan elemen di tengah secara horizontal */
+    transition: transform 0.3s, box-shadow 0.3s; /* Efek transisi pada hover */
+    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar */
+}
+
+/* Efek hover untuk item klien */
+.client-item:hover {
+    transform: scale(1.03); /* Efek angkat sedikit pada hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Meningkatkan bayangan pada hover */
+}
+
+/* Gaya untuk gambar dalam item klien */
+.client-item img {
+    width: 100%; /* Lebar gambar sesuai dengan lebar item */
+    height: 150px; /* Tinggi tetap untuk keseragaman */
+    object-fit: cover; /* Memastikan gambar menutupi area tanpa distorsi */
+    border-radius: 8px; /* Sudut melengkung pada gambar */
+}
+
+/* Gaya untuk informasi klien */
+.client-info {
+    margin-top: 10px; /* Jarak atas untuk informasi klien */
+    width: 100%; /* Mengatur info section agar menggunakan lebar penuh */
+    display: flex; /* Mengatur elemen secara fleksibel */
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    justify-content: space-between; /* Menyebarkan elemen secara merata */
+}
+
+/* Gaya untuk nama klien */
+.client-name {
+    font-weight: bold; /* Menebalkan teks nama klien */
+    margin-bottom: 10px; /* Jarak bawah untuk nama klien */
+}
+
+/* Gaya untuk rating klien */
+.rating {
+    margin-bottom: 10px; /* Jarak bawah untuk rating klien */
+}
+
+/* Gaya untuk bintang rating */
+.star {
+    font-size: 1.2em; /* Ukuran font untuk bintang */
+    color: #ffd700; /* Warna emas untuk bintang */
+}
+
+/* Gaya untuk testimonial */
+.testimonial {
+    background-color: #f9f9f9; /* Warna latar belakang untuk testimonial */
+    border: 1px solid #ddd; /* Garis batas untuk testimonial */
+    border-radius: 8px; /* Sudut melengkung pada testimonial */
+    padding: 10px; /* Padding di dalam testimonial */
+    font-style: italic; /* Gaya font miring untuk testimonial */
+    font-size: 0.85em; /* Ukuran font untuk testimonial */
+    line-height: 1.4; /* Jarak antar baris dalam testimonial */
+    min-height: 60px; /* Tinggi minimum untuk testimonial */
+    display: flex; /* Mengatur elemen secara fleksibel */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    justify-content: center; /* Menyelaraskan elemen secara horizontal di tengah */
+    text-align: center; /* Menyelaraskan teks di tengah */
+}
+
+/* Gaya untuk section kontak */
+#contact {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk judul section kontak */
+#contact h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #eee;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Gaya untuk konten kontak (info dan peta) */
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Gaya untuk informasi kontak */
+.contact-info {
+    flex: 1 1 100%;
+    text-align: left;
+}
+
+/* Gaya untuk paragraf informasi kontak */
+.contact-info p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+/* Gaya untuk link dalam informasi kontak */
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Efek hover untuk link informasi kontak */
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Gaya untuk formulir kontak */
+.contact-form {
+    flex: 1 1 48%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Gaya untuk peta kontak */
+.contact-map {
+    flex: 1 1 48%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk judul peta */
+.contact-map h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Gaya untuk peta itu sendiri */
+#map {
+    width: 100%;
+    height: 300px;
+}
+
+/* Gaya untuk section tentang kami */
+#about {
+    padding: 20px; /* Padding di sekitar konten about */
+    background-color: #f4f4f4; /* Warna latar belakang untuk section about */
+    border-radius: 12px; /* Sudut melengkung pada section about */
+}
+
+/* Section artikel */
+#articles {
+    background-color: #e0f7fa; /* Warna latar belakang untuk section artikel */
+    padding: 20px; /* Padding di seluruh section artikel */
+    margin-bottom: 40px; /* Jarak bawah untuk menghindari terlalu berdempetan dengan section lain */
+}
+
+#articles h2 {
+    margin-bottom: 30px; /* Jarak bawah untuk menghindari terlalu berdempetan dengan section lain */
+}
+
+/* Gaya untuk daftar artikel */
+#articles .articles {
+    display: flex;
+    flex-wrap: wrap; /* Membungkus item artikel ke baris berikutnya jika diperlukan */
+    gap: 20px; /* Jarak antara artikel */
+    justify-content: space-between; /* Menyebar item artikel dengan jarak yang konsisten */
+}
+
+/* Gaya untuk item artikel */
+#articles .article-item {
+    background-color: #fff; /* Warna latar belakang untuk item artikel */
+    padding: 15px; /* Padding di dalam item artikel */
+    border-radius: 8px; /* Sudut melengkung pada item artikel */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk memberikan kedalaman */
+    transition: transform 0.3s ease; /* Efek transisi pada hover */
+    flex: 1 1 calc(33.333% - 20px); /* Menyesuaikan ukuran kontainer artikel */
+    max-width: 300px; /* Lebar maksimum item artikel */
+    overflow: hidden; /* Menghindari overflow konten */
+    margin-bottom: 20px; /* Jarak bawah untuk item artikel */
+}
+
+/* Efek hover untuk item artikel */
+#articles .article-item:hover {
+    transform: translateY(-10px); /* Mengangkat item artikel pada hover */
+}
+
+/* Gaya untuk gambar dalam item artikel */
+#articles .article-item img {
+    width: 100%; /* Lebar gambar mengikuti lebar kontainer item */
+    height: 200px; /* Menetapkan tinggi tetap untuk gambar agar konsisten */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi dan tetap proporsional */
+    border-radius: 8px; /* Sudut melengkung pada gambar tetap */
+    display: block; /* Menghindari spasi ekstra di bawah gambar */
+    margin-bottom: 10px; /* Jarak bawah antara gambar dan teks */
+}
+
+/* Gaya untuk judul dalam item artikel */
+#articles .article-item h3 {
+    font-size: 1.5rem; /* Ukuran font untuk judul artikel */
+    margin: 15px 0; /* Jarak vertikal untuk judul artikel */
+    color: #00796b; /* Warna teks untuk judul artikel */
+    text-align: center; /* Menyelaraskan teks judul ke tengah */
+}
+
+/* Gaya untuk paragraf dalam item artikel */
+#articles .article-item p {
+    font-size: 0.9rem; /* Ukuran font untuk paragraf artikel */
+    color: #666; /* Warna teks untuk paragraf artikel */
+    text-align: center; /* Menyelaraskan teks paragraf ke tengah */
+    overflow: hidden; /* Menghindari overflow konten */
+    white-space: nowrap; /* Menghindari baris baru */
+    text-overflow: ellipsis; /* Menambahkan ellipsis (...) pada akhir teks yang dipotong */
+}
+
+/* Gaya untuk link baca selengkapnya */
+#articles .article-item .read-more {
+    display: inline-block; /* Menampilkan link sebagai blok inline */
+    margin-top: 10px; /* Jarak atas untuk link */
+    color: #00796b; /* Warna teks untuk link */
+    text-decoration: none; /* Menghapus garis bawah dari link */
+    font-weight: bold; /* Menebalkan teks link */
+}
+
+/* Section event */
+#events {
+    background-color: #e0f7fa; /* Warna latar belakang untuk section event */
+    padding: 20px; /* Padding di seluruh section event */
+    margin-bottom: 40px; /* Jarak bawah untuk menghindari terlalu berdempetan dengan section lain */
+}
+
+#events h2 {
+    margin-bottom: 30px; /* Jarak bawah untuk menghindari terlalu berdempetan dengan section lain */
+}
+
+/* Gaya untuk daftar event */
+#events .articles {
+    display: flex;
+    flex-wrap: wrap; /* Membungkus item event ke baris berikutnya jika diperlukan */
+    gap: 20px; /* Jarak antara event */
+    justify-content: space-between; /* Menyebar item event dengan jarak yang konsisten */
+}
+
+/* Gaya untuk item event */
+#events .article-item {
+    background-color: #fff; /* Warna latar belakang untuk item event */
+    padding: 15px; /* Padding di dalam item event */
+    border-radius: 8px; /* Sudut melengkung pada item event */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk memberikan kedalaman */
+    transition: transform 0.3s ease; /* Efek transisi pada hover */
+    flex: 1 1 calc(33.333% - 20px); /* Menyesuaikan ukuran kontainer event */
+    max-width: 300px; /* Lebar maksimum item event */
+    overflow: hidden; /* Menghindari overflow konten */
+    margin-bottom: 20px; /* Jarak bawah untuk item event */
+}
+
+/* Efek hover untuk item event */
+#events .article-item:hover {
+    transform: translateY(-10px); /* Mengangkat item event pada hover */
+}
+
+/* Gaya untuk gambar dalam item event */
+#events .article-item img {
+    width: 100%; /* Lebar gambar mengikuti lebar kontainer item */
+    height: 200px; /* Menetapkan tinggi tetap untuk gambar agar konsisten */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi dan tetap proporsional */
+    border-radius: 8px; /* Sudut melengkung pada gambar tetap */
+    display: block; /* Menghindari spasi ekstra di bawah gambar */
+    margin-bottom: 10px; /* Jarak bawah antara gambar dan teks */
+}
+
+/* Gaya untuk judul dalam item event */
+#events .article-item h3 {
+    font-size: 1.5rem; /* Ukuran font untuk judul event */
+    margin: 15px 0; /* Jarak vertikal untuk judul event */
+    color: #00796b; /* Warna teks untuk judul event */
+    text-align: center; /* Menyelaraskan teks judul ke tengah */
+}
+
+/* Gaya untuk paragraf dalam item event */
+#events .article-item p {
+    font-size: 0.9rem; /* Ukuran font untuk paragraf event */
+    color: #666; /* Warna teks untuk paragraf event */
+    text-align: center; /* Menyelaraskan teks paragraf ke tengah */
+    overflow: hidden; /* Menghindari overflow konten */
+    white-space: nowrap; /* Menghindari baris baru */
+    text-overflow: ellipsis; /* Menambahkan ellipsis (...) pada akhir teks yang dipotong */
+}
+
+/* Gaya untuk link detail event */
+#events .article-item .read-more {
+    display: inline-block; /* Menampilkan link sebagai blok inline */
+    margin-top: 10px; /* Jarak atas untuk link */
+    color: #00796b; /* Warna teks untuk link */
+    text-decoration: none; /* Menghapus garis bawah dari link */
+    font-weight: bold; /* Menebalkan teks link */
+}
+
+/* Gaya untuk footer */
+footer {
+    background-color: #333; /* Warna latar belakang untuk footer */
+    color: #fff; /* Warna teks untuk footer */
+    text-align: center; /* Menyelaraskan teks di tengah */
+    padding: 20px 0; /* Padding di atas dan bawah footer */
+    margin-top: 40px; /* Jarak atas untuk footer */
+    border-top: 4px solid #444; /* Garis batas atas untuk footer */
+    display: flex; /* Mengatur elemen dalam footer secara fleksibel */
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    align-items: center; /* Menyelaraskan elemen di tengah secara horizontal */
+}
+
+/* Gaya untuk daftar media sosial di footer */
+.social-media {
+    list-style: none; /* Menghapus bullet dari daftar */
+    padding: 0; /* Menghapus padding */
+    margin: 0 0 15px 0; /* Jarak bawah untuk daftar media sosial */
+    display: flex; /* Mengatur elemen daftar secara fleksibel */
+    justify-content: center; /* Menyelaraskan elemen daftar di tengah */
+    gap: 20px; /* Jarak antara ikon media sosial */
+}
+
+/* Gaya untuk item daftar media sosial */
+.social-media li {
+    display: inline-block; /* Menampilkan item sebagai blok inline */
+}
+
+/* Gaya untuk link media sosial */
+.social-media a {
+    color: #fff; /* Warna link media sosial */
+    font-size: 1.5em; /* Ukuran font untuk ikon media sosial */
+    transition: color 0.3s; /* Efek transisi pada hover */
+}
+
+/* Efek hover untuk link media sosial */
+.social-media a:hover {
+    color: #ffd700; /* Warna emas pada hover */
+}
+
+/* Gaya untuk paragraf di footer */
+footer p {
+    margin: 0; /* Menghapus margin pada paragraf */
+    font-size: 1em; /* Ukuran font untuk paragraf */
+    line-height: 1.5; /* Jarak antar baris dalam paragraf */
+    order: 2; /* Menyusun paragraf di bawah elemen lain */
+    margin-top: 15px; /* Jarak atas untuk paragraf */
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Sembunyikan tombol secara default */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+#scrollToTop:hover {
+    background-color: #0056b3;
+}
